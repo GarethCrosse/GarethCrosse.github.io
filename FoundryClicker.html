@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="FoundryClicker.css"/>
+<html>
+
+<title>Foundry Clicker</title>
+
+<head>
+	<script type="text/javascript" src="FoundryClicker.js"></script>
+	
+	<style>
+	body{
+			background-color: rgb(56,56,56);
+			line-height: 200%
+		}
+		
+	h1{
+			color: white; 
+			font-family: verdana;
+			font-size: 150%;
+			text-align: center;
+			padding: 10px;
+			margin: 10px;
+		}
+		
+	h2{
+			color: white; 
+			font-family: verdana;
+			font-size: 100%;
+			text-align: center;
+		}
+		
+	h3{
+			color: white; 
+			font-family: verdana;
+			font-size: 100%;
+			text-align: left;
+			padding: 10px;
+			margin: 5px;
+		}
+		
+	p{
+			color: white;
+			font-family: verdana;
+			font-size: 100%;
+		}
+		
+	div{
+			color: white;
+			font-family: verdana;
+			font-size: 100%;
+		}
+		
+<!--- DIV Columns --->	
+	#container {
+			width: 80%;
+			display: table;
+			
+		}
+
+	#row  {
+			display: table-row;
+		}
+
+	#left{
+			display: table-cell;
+		}
+		
+	#right
+			display: table-cell;
+    }
+	
+	.button {
+			background-color: dimgrey;
+			border: none;
+			color: white;
+			padding: 10px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 12px;
+			transition-duration: 0.5s;
+			cursor: pointer;
+		}
+		
+	.button1 {
+			background-color: dimgrey; 
+			color: white; 
+			border: 2px solid dimgrey;
+	}
+	
+	.button1:hover {
+			background-color: white; 
+			color: black; 
+			border: 2px solid white;
+	}
+	</style>
+</head>
+
+	<h1>Foundry Clicker</h1>
+		<h2>Version 0.03b - Alpha (Public, Reduced)</h2>
+
+<body>
+
+<div>
+	<p>Money: $<span id="moneyChestD">0</span>
+	</p>
+</div>
+
+<hr>
+
+<div id="container">
+  <div id="row">
+
+  	<div id="left">
+		<h4  align="center">Actions</h4>
+			<p>
+				<button class="button button1" onClick="acquireIron(1)">Acquire Iron</button>
+				<br>
+				<button class="button button1" onClick="acquireSilver(1)">Acquire Silver</button>
+			</p>
+	</div>
+  	<div id="right">
+    	<h4  align="center">Resources</h4>
+			<p>
+				Iron Ore: <span id="ironHaulD" style="color:gray;font-weight:bold">0</span> (<span id="ironAcqSD" style="color:gray;font-weight:bold">0</span>/s)
+				<br>
+			</p>
+			<p>
+				Silver Ore: <span id="silverHaulD" style="color:lightgray;font-weight:bold">0</span> (<span id="silverAcqSD" style="color:lightgray;font-weight:bold">0</span>/s)
+				<br>
+			</p>
+  	</div>
+</div>
+
+<hr>
+
+<div id="container">
+  <div id="row">
+
+  	<div id="left">
+		<h4  align="center">Market Place</h4>
+			<p>
+				<button class="button button1" onClick="sellIron(1)">Sell Iron</button>
+				<br>
+			</p>
+			<p>
+				<button class="button button1" onClick="sellSilver(1)">Sell Silver</button>
+				<br>
+			</p>
+	</div>
+  	<div id="right">
+    	<h4  align="center">*</h4>
+			<p>
+				Null
+			</p>
+  	</div>
+</div>
+
+<hr>
+
+<div id="container">
+  <div id="row">
+
+  	<div id="left">
+		<h4  align="center">Hire</h4>
+			<p>
+				<button class="button button1" onClick="hireIronMiner(1)">Hire Iron Miner</button>
+				<br>
+				Cost of Next Miner: <span id="ironMinersCostD" style="color:gray;font-weight:bold">10</span>		
+			</p>
+			<p>
+				<button class="button button1" onClick="hireSilverMiner(1)">Hire Silver Miner</button>
+				<br>
+				Cost of Next Miner: <span id="silverMinersCostD" style="color:lightgray;font-weight:bold">25</span>		
+			</p>
+	</div>
+  	<div id="right">
+    	<h4  align="center">Workers</h4>
+			<p>
+				Iron Miners: <span id="ironMinersD" style="color:gray;font-weight:bold">0</span>
+				<br>
+			</p>
+			<p>
+				Silver Miners: <span id="silverMinersD" style="color:lightgray;font-weight:bold">0</span>
+				<br>
+			</p>
+  	</div>
+</div>
+
+<hr>
+
+<div>
+	<p style="font-size: 10px; line-height: 150%">
+		Foundry Clicker (2023), by Gareth Crosse <br>
+		(CC BY-NC-SA 4.0) 
+	</p>
+</div>
+
+
+</body>
+
+</html>
